@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=yes">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <link rel="stylesheet" href="styles.css">
+
+        <title>ExpDate: Expiration Date Dataset</title>
+
+        <div id="container" style="width:100vw; background: #9b2226;">
+            <div style="height: 25px; background: #9b2226;"></div>
+            <div class="photobanner">
+                <img src="images/img_00016.jpg" height="250"/>
+                <img src="images/img_00115.jpg" height="250"/>
+                <img src="images/img_00256.jpg" height="250"/>
+                <img src="images/img_00310.jpg" height="250"/>
+                <img src="images/test_00001.jpg" height="250"/>
+                <img src="images/test_00200.jpg" height="250"/>
+                <img src="images/test_00625.jpg" height="250"/>
+                <img src="images/test_00631.jpg" height="250"/>
+                <img src="images/img_00016.jpg" height="250"/>
+                <img src="images/img_00115.jpg" height="250"/>
+                <img src="images/img_00256.jpg" height="250"/>
+                <img src="images/img_00310.jpg" height="250"/>
+                <img src="images/test_00001.jpg" height="250"/>
+                <img src="images/test_00200.jpg" height="250"/>
+                <img src="images/test_00625.jpg" height="250"/>
+                <img src="images/test_00631.jpg" height="250"/>
+            </div>
+            <div style="height: 25px; background: #9b2226;"></div>
+        </div>
+
+    </head>
+
+    <body style="margin-bottom: 5vw;">
+
+        <div style="margin-left: 10vw; margin-right: 10vw; margin-top: 6vh;">
+            <center>
+                <b style="text-align:center; font-size: 40px;">ExpDate: Expiration Date Dataset</b>
+            </center>
+
+
+            <br>
+            <div class="row" style="justify-content: center; font-size: 16px;">
+                <div class="row align-items-end">
+                    <div class="col text-center">
+<!--                             <a href="https://github.com/acseker/ExpDate"> <img height="40" src='figures/icon_paper.png'/></a> -->
+                        <a href="https://drive.google.com/file/d/1lvMiHdKoGKCO-krxana8rZzM0nxQeujS/view?usp=sharing"> <img height="40" src='figures/icon_paper.png'/></a>
+                        <h6> Paper</h6>
+                    </div>
+                    <div class="col text-center">
+<!--                         <a href="https://github.com/acseker/ExpDate"> <img height="40" src='figures/icon_dataset.png'/></a> -->
+                        <a href="https://drive.google.com/file/d/1lvMiHdKoGKCO-krxana8rZzM0nxQeujS/view?usp=sharing"> <img height="40" src='figures/icon_dataset.png'/></a>
+                        <h6>Dataset</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <b style="font-size: 25px;">Overview</b>
+            <p align="justify" style="font-size: 16px;">
+                ExpDate is a dataset for expiration date detection and recognition.
+                It contains real-world expiration date images captured from food, beverage, and medical products.
+                It also includes challenging cases with various date scales, different date fonts, reflection, complex backgrounds, etc.
+                Figure <span style="color: red"><strong>1</strong></span> visualizes some images in ExpDate.
+            </p>
+
+
+            <br>
+            <figure>
+                <div class="row" style="justify-content: center;">
+                    <div class="row align-items-end">
+                        <div class="col text-center">
+                            <img height="360" src="figures/gif_1.gif"/>
+                        </div>
+                        <div class="col text-center">
+                            <img height="360" src="figures/gif_2.gif"/>
+                        </div>
+                        <div class="col text-center">
+                            <img height="360" src="figures/gif_3.gif"/>
+                        </div>
+                    </div>
+                </div>
+                <figcaption style="text-align: center; font-size: 16px;"><strong>Figure 1: </strong>Expiration date images in ExpDate.</figcaption>
+            </figure>
+
+
+            <br>
+            <b style="font-size: 25px;">Details</b>
+            <p align="justify" style="font-size: 16px;">
+                ExpDate contains a total of 1767 images.
+                We split it into training and test sets consisting of 1102 training and 665 test images, respectively.
+                Additionally, the test set contains 1956 day, month, and year components, unlike the training set.
+                ExpDate has near-horizontal expiration dates in the images.
+                The width and height of the images vary in the range of [482, 2048] and [452, 2298] pixels, respectively.
+                The dates are between the years 2018 and 2026.
+                ExpDate has various types of expiration date fonts, including the dot-matrix font.
+                It also includes images with multiple dates on the products (i.e., expiration and production dates).
+                ExpDate includes 13 different expiration date formats.
+                The expiration date formats are shown in Table <span style="color: red"><strong>1</strong></span>.
+            </p>
+
+
+            <table class="center" style="font-size: 16px;">
+                <caption><strong>Table 1:</strong> Expiration date formats used in ExpDate.</caption>
+                <tr>
+                    <th>#No</th> <th>Date Format</th> <th>Sample</th>
+                    <th>#No</th> <th>Date Format</th> <th>Sample</th>
+                </tr>
+                <tr>
+                    <td><strong>1</strong></td> <td>DDMMYY</td> <td>29 10 2023</td>
+                    <td><strong>8</strong></td> <td>MMDD</td> <td>10 29</td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td> <td>DDMMMYY</td> <td>29 OCT 23</td>
+                    <td><strong>9</strong></td> <td>MMYYYY</td> <td>10 2023</td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td> <td>DDMMYYYY</td> <td>29 10 2023</td>
+                    <td><strong>10</strong></td> <td>MMMYYYY</td> <td>OCT 2023</td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td> <td>DDMMMYYYY</td> <td>23 OCT 2023</td>
+                    <td><strong>11</strong></td> <td>MMMDDYY</td> <td>OCT 29 23</td>
+                </tr>
+                <tr>
+                    <td><strong>5</strong></td> <td>YYYYMM</td> <td>2023 10</td>
+                    <td><strong>12</strong></td> <td>MMMDDYYYY</td> <td>OCT 29 2023</td>
+                </tr>
+                <tr>
+                    <td><strong>6</strong></td> <td>YYYYMMDD</td> <td>2023 10 29</td>
+                    <td><strong>13</strong></td> <td>YYYYMMMDD</td> <td>2023 OCT 29</td>
+                </tr>
+                <tr>
+                    <td><strong>7</strong></td> <td>YYMMDD</td> <td>23 10 29</td>
+                    <td><strong>-</strong></td> <td><strong>-</strong></td> <td><strong>-</strong></td>
+                </tr>
+            </table>
+
+
+            <br>
+            <b style="font-size: 25px;">Annotation</b>
+            <p align="justify" style="font-size: 16px;">
+                Each date in the images is annotated with class, bounding box coordinates, width and height of the image, and the date transcription.
+                We utilize the top-left and bottom-right bounding box coordinates.
+                The test set contains the annotations of the day, month, and year components in addition to date annotation, unlike the training set.
+                Each component is annotated with class, bounding box, and transcription.
+                The annotation format is shown in Figure <span style="color: red"><strong>2</strong></span>.
+            </p>
+
+
+            <br>
+            <figure>
+                <div class="row" style="justify-content: center;">
+                    <div class="row align-items-end">
+                        <div class="col text-center">
+                            <img height="200" src="figures/annotation_tr.png"/>
+                            <h5>(a)</h5>
+                        </div>
+                        <div class="col text-center">
+                            <img height="350" src="figures/annotation_eval.png"/>
+                            <h5>(b)</h5>
+                        </div>
+                    </div>
+                </div>
+                <figcaption style="text-align: center; font-size: 16px;"><strong>Figure 2: </strong>Annotation format for images.
+                    <strong>(a)</strong> Training set annotations. <strong>(b)</strong> Test set annotations.</figcaption>
+            </figure>
+
+            <br>
+            <b style="font-size: 25px;">Citation</b>
+            <p align="justify" style="font-size: 16px;">
+                If you find this dataset useful for your research, please cite:
+            </p>
+            <pre style="background-color: #f1f1f1; border-left: 20px font-size: 16px;">
+                @inproceedings{seker2021,
+                    title={A Generalized Framework for Recognition of Expiration Date on Product Packages Using Fully Convolutional Networks},
+                    author={Seker, Ahmet Cagatay and Ahn, Sang Chul},
+                    booktitle={-},
+                    pages={-},
+                    year={2021}
+                }
+            </pre>
+        </div>
+    </body>
+</html>
