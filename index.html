@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+        <title>ExpDate: Expiration Date Dataset</title>
+        <meta name="keywords" content="Expiration date dataset, expiration, expiry, due date"/>
+        <meta name="description" content="ExpDate provides expiration date images dataset."/>
+
+        <link rel="canonical" href="https://acseker.github.io/ExpDateWebsite/">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://acseker.github.io/ExpDateWebsite/"/>
+        <meta property="og:title" content="ExpDate: Expiration Date Dataset"/>
+        <meta property="og:description" content="ExpDate provides expiration date images dataset."/>
+        <meta property="og:image" content="https://github.com/acseker/ExpDateWebsite/blob/main/images/img_01.jpg?raw=true"/>
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://acseker.github.io/ExpDateWebsite/"/>
+        <meta property="twitter:title" content="ExpDate: Expiration Date Dataset"/>
+        <meta property="twitter:description" content="ExpDate provides expiration date images dataset."/>
+        <meta property="twitter:image" content="https://github.com/acseker/ExpDateWebsite/blob/main/images/img_01.jpg?raw=true"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+
+    </head>
+
+    <body>
+        <!-- Sliding images -->
+        <div id="container-photobanner">
+            <div class="photobanner">
+                <img src="images/img_01.jpg" height="250"/>
+                <img src="images/img_02.jpg" height="250"/>
+                <img src="images/img_03.jpg" height="250"/>
+                <img src="images/img_04.jpg" height="250"/>
+                <img src="images/img_05.jpg" height="250"/>
+                <img src="images/img_06.jpg" height="250"/>
+                <img src="images/img_07.jpg" height="250"/>
+                <img src="images/img_08.jpg" height="250"/>
+                <img src="images/img_01.jpg" height="250"/>
+                <img src="images/img_02.jpg" height="250"/>
+                <img src="images/img_03.jpg" height="250"/>
+                <img src="images/img_04.jpg" height="250"/>
+                <img src="images/img_05.jpg" height="250"/>
+                <img src="images/img_06.jpg" height="250"/>
+                <img src="images/img_07.jpg" height="250"/>
+                <img src="images/img_08.jpg" height="250"/>
+
+            </div>
+        </div>
+
+        <!-- Page entrance-->
+        <div class="page">
+
+            <!-- Title -->
+            <h1 class="title-style">
+                A Generalized Framework for Recognition of Expiration Date on Product Packages
+                Using Fully Convolutional Networks
+            </h1>
+
+            <b>
+                <p class="center_text" align="center" >
+                    <a target="_blank"
+                       href="">Ahmet Cagatay Seker</a><sup>1, 2</sup>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a target="_blank"
+                       href="">Sang Chul Ahn</a><sup>1, 2</sup>
+                </p>
+            </b>
+
+            <b>
+                <p class="center_text" align="center">
+                    <sup>1</sup>University of Science and Technology
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <sup>2</sup>Korea Institute of Science and Technology
+                </p>
+            </b>
+
+            <!-- Paper, exe, and dataset icons -->
+            <br>
+            <div class="row icons">
+                <div class="row align-items-end">
+                    <div class="col text-center">
+                        <a href="https://drive.google.com/file/d/1wTaXGbmXy-fAuInhfUk04ZQ-rZZGfKSV/view?usp=sharing">
+                            <img height="40" src='figures/icon_paper.png'/>
+                            <h6><b>Paper</b></h6>
+                        </a>
+                    </div>
+                    <div class="col text-center">
+                        <a href="https://drive.google.com/drive/folders/15bEaQMYmjgJ7LHl2bS-fkKM6mw0iwq1S?usp=sharing">
+                            <img height="40" src='figures/icon_exe.png'/>
+                            <h6><b>Exe</b></h6>
+                        </a>
+                    </div>
+                    <div class="col text-center">
+                        <a href="https://drive.google.com/drive/folders/1YuxWzVj6bT6gs6XlewEGetYrdgwZt7EH?usp=sharing">
+                            <img height="40" src='figures/icon_dataset.png'/>
+                            <h6><b>Dataset</b></h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Introduction Section -->
+            <br>
+            <h4> <b> Introduction </b> </h4>
+            <p class="text">
+                This study proposes a generalized framework for detecting and
+                understanding product expiration dates.
+                Figure <a href=#figure1> <span style="color: red"><b>1</b></span></a> shows the overall architecture of the proposed framework.
+                The proposed framework consists of three networks: Date detection, DMY detection, and Recognition networks, sequentially.
+                Given an input image, the date detection network detects the dates and extracts their regions from the entire input image.
+                Then, the DMY detection network identifies and extracts the day, month, and year components from the detected date regions.
+                Later, the recognition network recognizes the characters of the day, month, and year components.
+                Finally, the appropriate date is selected as an expiration date after the recognition of characters.
+            </p>
+
+            <!-- Figure-1 -->
+            <br>
+            <a id="figure1">
+                <figure>
+                    <div class="row fig-style">
+                        <div class="row align-items-end">
+                            <div>
+                                <img src="figures/figure_1.jpg" height="130"/>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption class="fig-caption">  <b>Figure 1: </b>
+                        The overall architecture of the proposed framework for expiration date detection and understanding.
+                    </figcaption>
+                </figure>
+            </a>
+
+            <!-- Results Section -->
+            <br>
+            <h4> <b> Results </b> </h4>
+            <p class="text">
+                The proposed framework can handle challenging expiration date cases and distinguish
+                13 different date formats in Table
+                <a href=#table1> <span style="color: red"><b>1</b></span></a>.
+                It can detect and understand the expiration dates
+                even when the input image contains multiple dates.
+                Figure <a href=#figure2> <span style="color: red"><b>2</b></span></a>
+                shows the results of the understanding expiration date.
+                Moreover, the proposed framework can detect date, due mark, production mark, and code mark classes.
+            </p>
+            
+            <!-- Figure-2 -->
+            <br>
+            <a id="figure2">
+                <figure>
+                    <div class="row fig-style">
+                        <div>
+                        <img src="figures/figure_2.gif" height="350"/>
+                        </div>
+                    </div>
+                    <figcaption class="fig-caption">  <b>Figure 2: </b>
+                        Qualitative results of the expiration date recognition and understanding.
+                        <br>
+                        <span style="color: green"><b>Green</b></span>,
+                        <span style="color: dodgerblue"><b>cyan</b></span>,
+                        <span style="color: red"><b>red</b></span> denote the day, month, and year detection, respectively.
+                        <br>
+                        <span style="color: orange"><b>Orange</b></span>,
+                        <span style="color: purple"><b>purple</b></span>,
+                        <span style="color: blue"><b>blue</b></span> denote the due mark, production mark, and code mark detection, respectively.
+                    </figcaption>
+                </figure>
+            </a>
+
+            <!-- Executable Files Section -->
+            <br>
+            <h4> <b> Executable Files </b> </h4>
+            <p class="text">
+                We've released
+                <a href="https://drive.google.com/drive/folders/15bEaQMYmjgJ7LHl2bS-fkKM6mw0iwq1S?usp=sharing">
+                    <b>executable</b></a>
+                files of the proposed framework for Windows and Ubuntu operating systems.
+                To see the detection and understanding results separately, we divided the proposed framework into
+                two executable files as <code class="word">run_detection.exe</code> for detecting date
+                and <code class="word">run_recognition.exe</code> for understanding the detected dates.
+                Anyone who would like to test their images can use the following instructions.
+            </p>
+
+            <!-- Testing Images Section -->
+            <h4> <b> Testing Images </b> </h4>
+             <p class="text">
+                 <b>Step 1:</b> Create a folder named <code class="word">images_det</code> that contains the test images.
+                <br>
+                <b>Step 2:</b> Place <code class="word">images_det</code> folder and all <code class="word">.exe</code> files in the same directory.
+                <br>
+                <b>Step 3:</b> Run the following commands for detecting the dates.
+            </p>
+
+            <pre style="background-color: #f1f1f1;"><code class="language-markup"># for windows
+cd path/to/exe
+run_detection.exe
+
+# for ubuntu
+cd path/to/exe
+./run_detection</code></pre>
+
+            <p class="text">
+                After running the <code class="word">run_detection.exe</code> file,
+                a folder named <code class="word">results_det</code> containing the detected dates
+                and a folder named <code class="word">images_rec</code> containing the cropped regions of detected dates,
+                will be created in the same directory as executable files. The images in <code class="word">images_rec</code> folder are the
+                input images for the <code class="word">run_recognition.exe</code> file.
+                Noting that, the <code class="word">images_rec</code> folder also contains a <code class="word">cropped_img_list.json</code> file
+                that includes the list of cropped images for an input image for detection network.
+                If you would like to use the <code class="word">run_recognition.exe</code> file independent from the results of
+                <code class="word">run_detection.exe</code>, just remove the <code class="word">cropped_img_list.json</code> file before running it.
+                <br>
+                <br>
+                <b>Step 4:</b> Run the following commands for understanding the dates.
+            </p>
+
+            <pre style="background-color: #f1f1f1;"><code class="language-markup"># for windows
+cd path/to/exe
+run_recognition.exe
+
+# for ubuntu
+cd path/to/exe
+./run_recognition</code></pre>
+
+            <p class="text">
+                After running the <code class="word">run_recognition.exe</code> file,
+                a folder named <code class="word">results_rec</code> will be created in the same directory as executable files.
+                It contains the day, month, and year detection results and the recognized expiration dates
+                with the meaning in a <code class="word">.txt</code> file.
+            </p>
+
+            <!-- Testing Webcam Section -->
+            <h4> <b> Testing Webcam </b> </h4>
+            <p class="text">
+                We also provide an executable file in which you can use your webcam for
+                detecting and understanding the expiration date in real-time. You can use the following instructions
+                to use your webcam.
+            </p>
+
+            <pre style="background-color: #f1f1f1;"><code class="language-markup"># for windows
+cd path/to/exe
+run_webcam.exe
+
+# for ubuntu
+cd path/to/exe
+./run_webcam</code></pre>
+
+            <!-- Webcam Video -->
+            <div class="col text-center">
+                <h5><b>Webcam Video</b></h5>
+                <video width="540" controls>
+                    <source src="figures/webcam.mp4" type="video/mp4">
+                    <source src="figures/webcam.mp4" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+
+            <!-- ExpDate: Expiration Date Dataset -->
+            <br><br><br>
+            <h1 class="title-style">
+                ExpDate: Expiration Date Dataset
+            </h1>
+
+            <br>
+            <h4> <b> Introduction </b> </h4>
+            <p class="text">
+                In the lack of a publicly available dataset, we built six novel datasets
+                to detect and understand the expiration dates.
+                The collection of these datasets is named
+                <a href="https://drive.google.com/drive/folders/1YuxWzVj6bT6gs6XlewEGetYrdgwZt7EH?usp=sharing">
+                    <b>ExpDate</b></a>,
+                which consists of real and synthetic images of the product, date,
+                and date components with various challenging cases.
+            </p>
+
+            <!-- Figure-3 -->
+            <br>
+            <a id="figure3">
+                <figure>
+                    <div class="row fig-style">
+                        <div class="row align-items-end">
+                            <div class="col text-center">
+                                <img height="350" src="figures/figure_3.gif"/>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption class="fig-caption">
+                        <b>Figure 3: </b>Expiration date images in ExpDate. It contains challenging date
+                        images such as different font and date formats, multiple dates, etc.
+                    </figcaption>
+                </figure>
+            </a>
+
+            <!-- Details Section -->
+            <br>
+            <h4> <b> Details </b> </h4>
+            <p class="text">
+                For the date detection task, a novel expiration date dataset, <b>Products-Real</b>, was created
+                by capturing 1767 real-world images with near-horizontal dates
+                from food, beverage, and medicine products.
+                It is split into training and test sets consisting of 1102 and 665 images.
+                Additionally, around 12k product images with synthetic dates were generated
+                to obtain various and challenging date samples.
+                This synthetic dataset is called as <b>Products-Synth</b> and is used only for training.
+
+                <br><br>
+                To parse the dates into one of the date formats,
+                another novel dataset named <b>Date-Synth</b> was created
+                to train the DMY detection network, containing 128k images with a synthetic date.
+                A test dataset, <b>Date-Real</b>, was constructed for evaluation.
+
+                For the recognition task, a novel dataset, <b>Components-Synth</b>, was collected
+                by generating 450k training images with synthetic date components.
+                The components of the dates in Date-Real were used to create a new dataset named
+                <b>Components-Real</b> for the evaluation of the recognition task.
+                Figure <a href=#figure3> <span style="color: red"><b>3</b></span></a> visualizes
+                some images from ExpDate dataset.
+
+                <br><br>
+                Eventually, ExpDate consists of six different datasets containing real and synthetic images.
+                It includes challenging cases with various date scales, different date fonts
+                (including the dot-matrix), reflection, complex backgrounds, etc.
+                Additionally, it contains images with multiple dates on the products (i.e., expiration and production dates).
+                Thirteen different expiration date formats in ExpDate are shown in Table
+                <a href=#table1> <span style="color: red"><b>1</b></span></a>.
+            </p>
+
+            <!-- Table-1 -->
+            <a id="table1">
+                <table class="table-center" style="font-size: 16px;">
+                    <caption> <b>Table 1:</b> Expiration date formats used in ExpDate.</caption>
+                    <tr>
+                        <th>#No</th> <th>Date Format</th> <th>Sample</th>
+                        <th>#No</th> <th>Date Format</th> <th>Sample</th>
+                    </tr>
+                    <tr>
+                        <td><b>1</b></td> <td>DDMMYY</td> <td>29 10 2023</td>
+                        <td><b>8</b></td> <td>MMDD</td> <td>10 29</td>
+                    </tr>
+                    <tr>
+                        <td><b>2</b></td> <td>DDMMMYY</td> <td>29 OCT 23</td>
+                        <td><b>9</b></td> <td>MMYYYY</td> <td>10 2023</td>
+                    </tr>
+                    <tr>
+                        <td><b>3</b></td> <td>DDMMYYYY</td> <td>29 10 2023</td>
+                        <td><b>10</b></td> <td>MMMYYYY</td> <td>OCT 2023</td>
+                    </tr>
+                    <tr>
+                        <td><b>4</b></td> <td>DDMMMYYYY</td> <td>23 OCT 2023</td>
+                        <td><b>11</b></td> <td>MMMDDYY</td> <td>OCT 29 23</td>
+                    </tr>
+                    <tr>
+                        <td><b>5</b></td> <td>YYYYMM</td> <td>2023 10</td>
+                        <td><b>12</b></td> <td>MMMDDYYYY</td> <td>OCT 29 2023</td>
+                    </tr>
+                    <tr>
+                        <td><b>6</b></td> <td>YYYYMMDD</td> <td>2023 10 29</td>
+                        <td><b>13</b></td> <td>YYYYMMMDD</td> <td>2023 OCT 29</td>
+                    </tr>
+                    <tr>
+                        <td><b>7</b></td> <td>YYMMDD</td> <td>23 10 29</td>
+                        <td><b>-</b></td> <td><b>-</b></td> <td><b>-</b></td>
+                    </tr>
+                </table>
+            </a>
+
+
+            <!-- Annotation Section -->
+            <br>
+            <h4> <b> Annotation </b> </h4>
+            <p class="text">
+                Each date in the Products-Real and Products-Synth datasets is annotated
+                with class, bounding box coordinates, date transcription, image width, and height.
+                There are four classes defined: date, due, prod, and code in the training sets.
+                Expiration dates in the test set of Product-Real
+                are specifically labeled as "exp" class for easy evaluation,
+                unlike the training set of Product-Real.
+
+                Each component in the Date-Real and Date-Synth datasets is annotated with class,
+                bounding box, and transcription. The day, month, and year are used as the classes
+                for each component of the dates.
+                Moreover, Components-Real and Components-Synth datasets consist of the components of
+                the day, month, and year and their transcriptions.
+            </p>
+
+            <!-- Citation Section -->
+            <br>
+            <h4> <b> Citation </b> </h4>
+            <p class="text">
+                If you find this study useful for your research, please consider citing:
+            </p>
+
+            <pre>
+  @inproceedings{seker,
+      title={A Generalized Framework for Recognition of Expiration Dates on Product Packages Using Fully Convolutional Networks},
+      author={Seker, Ahmet Cagatay and Ahn, Sang Chul},
+      booktitle={-},
+      pages={-},
+      year={2022}
+  }
+            </pre>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+    </body>
+</html>
+
+
+
