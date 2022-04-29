@@ -36,7 +36,7 @@ is now publicly available for further research.
 
 
 ## Details
-Please check the **[project page](https://felizang.github.io/ExpDate/)** for
+Please check the **[project page](https://felizang.github.io/expdate/)** for
 more details about executable files and the dataset.
 
 
