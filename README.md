@@ -1,7 +1,7 @@
 
 # A Generalized Framework for Recognition of Expiration Date on Product Packages Using Fully Convolutional Networks
 
-**[Paper](https://drive.google.com/file/d/1wTaXGbmXy-fAuInhfUk04ZQ-rZZGfKSV/view?usp=sharing)
+**[Paper](https://doi.org/10.1016/j.eswa.2022.117310)
 \-
 [Exe](https://drive.google.com/drive/folders/15bEaQMYmjgJ7LHl2bS-fkKM6mw0iwq1S?usp=sharing)
 \- [Dataset](https://drive.google.com/drive/folders/1YuxWzVj6bT6gs6XlewEGetYrdgwZt7EH?usp=sharing)**
