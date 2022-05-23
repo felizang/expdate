@@ -43,13 +43,13 @@ more details about executable files and the dataset.
 ## Citation
 If you find this dataset useful for your research, please cite:
 
-  @article{seker, \
-      title={A Generalized Framework for Recognition of Expiration Dates on Product Packages Using Fully Convolutional Networks}, \
-      author={Seker, Ahmet Cagatay and Ahn, Sang Chul}, \
-      journal={Expert Systems with Applications}, \
-      volume={203}, \
-      number={117310}, \
-      month={10}, \
-      year={2022}, \
-      doi={10.1016/j.eswa.2022.117310} \
-  } 
+    @article{seker, 
+        title={A Generalized Framework for Recognition of Expiration Dates on Product Packages Using Fully Convolutional Networks}, 
+        author={Seker, Ahmet Cagatay and Ahn, Sang Chul}, 
+        journal={Expert Systems with Applications}, 
+        volume={203}, 
+        number={117310}, 
+        month={10}, 
+        year={2022}, 
+        doi={10.1016/j.eswa.2022.117310} 
+    } 
