@@ -17,8 +17,10 @@
 }
 
 .box1 {
-    width: 150;
-    margin: auto;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
 }
 
 .icons {
