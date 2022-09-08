@@ -23,6 +23,7 @@
 
 .icons {
     float: left;
+    margin: 3px;
     justify-content: center;
     font-size: 16px;
 }
