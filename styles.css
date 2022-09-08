@@ -16,6 +16,11 @@
     font-size: 40px;
 }
 
+.box1 {
+    width: 150;
+    margin: auto;
+}
+
 .icons {
     float: left;
     justify-content: center;
