@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="ExpDate: Expiration Date Dataset">
+  <meta name="keywords" content="Expiration date, Date recognition, Date parser, Food safety, Convolutional network, Deep learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExpDate</title>
+
+  <!-- Open Graph meta tags for social media previews -->
+  <meta property="og:title" content="ExpDate: Expiration Date Dataset">
+  <meta property="og:description" content="ExpDate: A collection of six real and synthetic datasets containing challenging images of expiration dates, designed for detecting, parsing, and recognizing diverse date formats on product packages.">
+  <meta property="og:image" content="./static/images/teaser.svg">
+  <meta property="og:image:alt" content="Example of expiration date on a product package">
+  <meta property="og:url" content="https://acseker.github.io/Expdate/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ExpDate">
+
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ExpDate: Expiration Date Dataset">
+  <meta name="twitter:description" content="ExpDate: A collection of six real and synthetic datasets containing challenging images of expiration dates, designed for detecting, parsing, and recognizing diverse date formats on product packages.">
+  <meta name="twitter:image" content="./static/images/teaser.svg">
+  <meta name="twitter:image:alt" content="Example of expiration date on a product package">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+
+
+<body>
+
+<!-- Sliding Images. -->
+<section class="section" style="padding:0;">
+  <div id="container-photobanner">
+    <div class="photobanner">
+      <img src="./static/images/slider_img1.jpg" alt="Sample 1"/>
+      <img src="./static/images/slider_img2.jpg" alt="Sample 2"/>
+      <img src="./static/images/slider_img3.jpg" alt="Sample 3"/>
+      <img src="./static/images/slider_img4.jpg" alt="Sample 4"/>
+      <img src="./static/images/slider_img5.jpg" alt="Sample 5"/>
+      <img src="./static/images/slider_img6.jpg" alt="Sample 6"/>
+      <img src="./static/images/slider_img7.jpg" alt="Sample 7"/>
+      <img src="./static/images/slider_img8.jpg" alt="Sample 8"/>
+
+      <!-- Duplicate for smooth infinite loop -->
+      <img src="./static/images/slider_img1.jpg" alt="Sample 1"/>
+      <img src="./static/images/slider_img2.jpg" alt="Sample 2"/>
+      <img src="./static/images/slider_img3.jpg" alt="Sample 3"/>
+      <img src="./static/images/slider_img4.jpg" alt="Sample 4"/>
+      <img src="./static/images/slider_img5.jpg" alt="Sample 5"/>
+      <img src="./static/images/slider_img6.jpg" alt="Sample 6"/>
+      <img src="./static/images/slider_img7.jpg" alt="Sample 7"/>
+      <img src="./static/images/slider_img8.jpg" alt="Sample 8"/>
+    </div>
+  </div>
+</section>
+<!--/ Sliding Images. -->
+
+
+
+
+
+<!-- Title/Authors/Icons. -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- Title. -->
+          <h1 class="title is-1 publication-title">
+            <img src="" alt="" style="height: 1.5em; vertical-align: middle;">
+            <strong><span class="dnerf" style="font-size: 60px;">ExpDate:</span></strong> Expiration Date Dataset
+          </h1>
+          <!--/ Title. -->
+
+          <!-- Icons. -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- Home Link. -->
+              <span class="link-block">
+                <a href="index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-home"></i>
+                  </span>
+                  <span>Home</span>
+                </a>
+              </span>
+              <!--/ Home Link. -->
+
+              <!-- Drive Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1YuxWzVj6bT6gs6XlewEGetYrdgwZt7EH"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-google-drive"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <!--/ Drive Link. -->
+
+            </div>
+          </div>
+          <!--/ Icons. -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Title/Authors/Icons. -->
+
+
+
+
+
+<!-- Overview. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="margin-bottom: 0;">
+      <div class="column is-full">
+        <h2 class="title is-3" style="font-weight: bold; margin-bottom: 20px;">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            In the absence of a publicly available dataset for expiration-date understanding, six datasets were constructed 
+            for date detection, parsing, and recognition. Collectively named 
+            <strong><span class="dnerf" style="font-size: 20px;">ExpDate</span></strong>, these datasets contain real and 
+            synthetic images of product packages, complete dates, and individual date components. They cover challenging 
+            scenarios involving diverse fonts and date formats, multiple dates, reflections, complex backgrounds, 
+            and variations in scale and appearance.  
+          </p>
+        </div>
+        
+        <br>
+
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+              <img src="./static/images/dataset_img1.svg"
+                    style="width: 100%; max-width: 100%; height: auto;" alt="Dataset image."/>
+          </div>
+          <div class="item">
+              <img src="./static/images/dataset_img2.svg"
+                    style="width: 100%; max-width: 100%; height: auto;" alt="Dataset image."/>
+          </div>
+          <div class="item">
+              <img src="./static/images/dataset_img3.svg"
+                    style="width: 100%; max-width: 100%; height: auto;" alt="Dataset image."/>
+          </div>
+        </div>
+        
+        <p class="has-text-justified">
+          Representative expiration-date images from <strong><span class="dnerf" style="font-size: 20px;">ExpDate</span></strong>, illustrating diverse fonts and date formats, multiple dates, reflections, complex backgrounds, and other challenging imaging conditions.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Overview. -->
+
+
+
+
+
+<!-- Dataset Details. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="margin-bottom: 20px;">
+      <div class="column is-full">
+        <h2 class="title is-3" style="font-weight: bold;">Dataset Details</h2>
+        <div class="content has-text-justified">
+          <p>
+            For the date detection task,
+            <strong>Products-Real</strong> contains <strong>1,767 real-world images</strong>
+            of food, beverage, and pharmaceutical products with approximately horizontal
+            date labels. The images were collected from diverse product packages to capture
+            variations in packaging materials, printing styles, backgrounds, and imaging
+            conditions. The dataset is divided into <strong>1,102 training images</strong>
+            and <strong>665 test images</strong>. In addition,
+            <strong>Products-Synth</strong> contains approximately
+            <strong>12,000 product images</strong> with synthetically generated dates and
+            is used exclusively for training. These synthetic samples increase the diversity
+            of date appearances and provide additional variations that may be difficult to
+            collect under real-world conditions.
+          </p>
+
+          <p>
+            For the date parsing task,
+            <strong>Date-Synth</strong> contains <strong>128,000 synthetic date images</strong>
+            and is used to train the day–month–year (DMY) detection network.
+            The dataset contains diverse date arrangements and formats, enabling the network
+            to identify and separate the day, month, and year components.
+            <strong>Date-Real</strong>, which contains date regions extracted from real
+            product images, is used to evaluate parsing performance under practical imaging
+            conditions.
+          </p>
+
+          <p>
+            For the character recognition task,
+            <strong>Components-Synth</strong> contains
+            <strong>450,000 synthetically generated images</strong> of individual date
+            components. These samples provide substantial variations in characters, fonts,
+            scales, and visual appearance for training the recognition network.
+            <strong>Components-Real</strong>, derived from the date components annotated in
+            <strong>Date-Real</strong>, is used to evaluate recognition performance on
+            real-world samples.
+          </p>
+
+          <p>
+            Overall, <strong><span class="dnerf" style="font-size: 20px;">ExpDate</span></strong> 
+            comprises <strong>six real and synthetic datasets</strong> covering the complete
+            expiration-date detection, parsing, and recognition pipeline. It includes challenging 
+            cases involving different date scales and formats, diverse fonts, including 
+            dot-matrix fonts, reflections, uneven illumination, complex backgrounds, and 
+            multiple dates on a single product. By combining large-scale
+            synthetic training data with real-world training and evaluation samples,
+            <strong><span class="dnerf" style="font-size: 20px;">ExpDate</span></strong> 
+            supports the development and systematic evaluation of
+            robust expiration-date understanding systems. The
+            <strong>13 supported expiration-date formats</strong> are presented in
+            <a href="#table1"><strong>Table 1</strong></a>.
+          </p>
+
+          <br>
+          <div class="table-wrapper">
+            <table id="table1" class="table-center" style="font-size: 16px; border-collapse: collapse; margin: 0 auto;">
+              <caption style="caption-side: top; text-align: justify; font-weight: normal; margin-bottom: 8px;">
+                <strong>Table 1:</strong> Supported expiration-date formats in <strong><span class="dnerf" style="font-size: 20px;">ExpDate</span></strong> dataset and their corresponding examples.
+              </caption>
+              <thead>
+                <tr>
+                  <th>#</th> <th>Date Format</th> <th>Date</th>
+                  <th>#</th> <th>Date Format</th> <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color:#F5F5F5;">
+                  <td><strong>1</strong></td> <td>DDMMYY</td> <td>29 10 23</td>
+                  <td><strong>8</strong></td> <td>MMDD</td> <td>10 29</td>
+                </tr>
+                <tr>
+                  <td><strong>2</strong></td> <td>DDMMMYY</td> <td>29 OCT 23</td>
+                  <td><strong>9</strong></td> <td>MMYYYY</td> <td>10 2023</td>
+                </tr>
+                <tr style="background-color:#F5F5F5;">
+                  <td><strong>3</strong></td> <td>DDMMYYYY</td> <td>29 10 2023</td>
+                  <td><strong>10</strong></td> <td>MMMYYYY</td> <td>OCT 2023</td>
+                </tr>
+                <tr>
+                  <td><strong>4</strong></td> <td>DDMMMYYYY</td> <td>29 OCT 2023</td>
+                  <td><strong>11</strong></td> <td>MMMDDYY</td> <td>OCT 29 23</td>
+                </tr>
+                <tr style="background-color:#F5F5F5;">
+                  <td><strong>5</strong></td> <td>YYYYMM</td> <td>2023 10</td>
+                  <td><strong>12</strong></td> <td>MMMDDYYYY</td> <td>OCT 29 2023</td>
+                </tr>
+                <tr>
+                  <td><strong>6</strong></td> <td>YYYYMMDD</td> <td>2023 10 29</td>
+                  <td><strong>13</strong></td> <td>YYYYMMMDD</td> <td>2023 OCT 29</td>
+                </tr>
+                <tr style="background-color:#F5F5F5;">
+                  <td><strong>7</strong></td> <td>YYMMDD</td> <td>23 10 29</td>
+                  <td><strong></strong></td> <td><strong></strong></td> <td><strong></strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Dataset Details. -->
+
+
+
+
+
+<!-- Annotation. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="margin-bottom: 0;">
+      <div class="column is-full">
+        <h2 class="title is-3" style="font-weight: bold; margin-bottom: 20px;">Annotation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Each date component in <strong>Products-Real</strong> and
+            <strong>Products-Synth</strong> is annotated with its class label,
+            bounding-box coordinates, transcription, and image dimensions. Four classes
+            are defined in the training sets: <strong>date</strong>,
+            <strong>due mark</strong>, <strong>production mark</strong>, and
+            <strong>code mark</strong>. For evaluation, expiration-date 
+            component in the <strong>Products-Real</strong> test set are additionally 
+            labeled as <strong>exp</strong>, allowing them to be distinguished from other 
+            dates and evaluated separately.
+          </p>
+
+          <p>
+            Each date component in <strong>Date-Real</strong> and
+            <strong>Date-Synth</strong> is annotated with its class label, bounding-box
+            coordinates, and transcription. The component classes correspond to the
+            <strong>day</strong>, <strong>month</strong>, and <strong>year</strong>.
+            <strong>Components-Real</strong> and <strong>Components-Synth</strong>
+            contain the extracted date components and their corresponding transcriptions.
+            The following code blocks show the annotation formats used for each dataset.
+          </p>
+
+          <!-- Code block -->
+          <div class="code-container">
+
+            <!-- Products block -->
+            <pre><code class="language-json">{
+  // For Products Datasets
+  "image name": {
+    "height": int,
+    "width": int,
+    "ann": [
+      {
+        "cls": str,  
+        "bbox": [x1, y1, x2, y2],
+        "transcription": str,
+        "dmy_ann": [  // for evaluation
+          {
+            "cls": str,
+            "bbox": [x1, y1, x2, y2],
+            "transcription": str
+          },
+          ...
+        ]
+      }
+    ]
+  },
+  ...
+}
+            </code></pre>
+            <!--/ Products block -->
+            
+            <!-- Date block -->
+            <pre><code class="language-json">{
+  // For Date Datasets
+  "image name": {
+    "height": int,
+    "width": int,
+    "ann": [
+      {
+        "cls": str,
+        "bbox": [x1, y1, x2, y2],
+        "transcription": str
+      },
+      ...
+    ]
+  },
+  ...
+}
+            </code></pre>
+            <!--/ Date block -->
+          
+            <!-- Components block -->
+            <pre><code class="language-json">{
+  // For Components Datasets
+  "image name": {
+    "height": int,
+    "width": int,
+    "transcription": str
+  },
+  ...
+}
+          </code></pre>
+          <!-- Components block -->
+          
+          </div>
+          <!--/ Code block -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Annotation. -->
+
+
+
+
+
+<!-- License. -->
+<section class="section hero" id="license">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">License</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            The <strong><span class="dnerf" style="font-size: 20px;">ExpDate</span></strong> 
+            dataset is licensed under the
+            <a href="https://creativecommons.org/licenses/by/4.0/"
+               target="_blank"
+               rel="noopener noreferrer">
+              <strong>Creative Commons Attribution 4.0 International
+              (CC BY 4.0) License</strong>
+            </a>.
+            The dataset may be used, shared, and adapted for both research and
+            commercial purposes, provided that appropriate credit is given to
+            the original creators and any modifications are clearly indicated.
+          </p>
+
+          <p>
+            When using <strong><span class="dnerf" style="font-size: 20px;">ExpDate</span></strong>, 
+            please cite the associated publication and acknowledge that the dataset was
+            created by the <strong>Korea Institute of Science and Technology
+            (KIST)</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ License. -->
+
+
+
+
+
+<!-- Citation. -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>If you find this work useful in your research, please consider citing:</p>
+    <div style="position: relative;">
+      <pre class="bibtex"><code>@article{seker2022generalized,
+  title     = {A generalized framework for recognition of expiration dates on product packages using fully convolutional networks},
+  author    = {Seker, Ahmet Cagatay and Ahn, Sang Chul},
+  journal   = {Expert Systems with Applications},
+  volume    = {203},
+  pages     = {117310},
+  year      = {2022},
+  publisher = {Elsevier},
+}</code></pre>
+      <button class="copy-btn" onclick="copyBibTeX()" id="copyButton">
+        <svg id="copyIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+
+        <svg id="checkIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          style="display:none;">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+
+        <span id="copyText">Copy</span>
+        <span id="copiedText" style="display:none;">Copied</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!--/ Citation. -->
+
+
+
+
+
+<!-- Footer. -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a> and borrowed from the
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/ Footer. -->
+
+
+
+<!-- Prism JS. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+<!--/ Prism JS. -->
+
+
+
+
+
+</body>
+</html>
