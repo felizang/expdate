@@ -11,7 +11,7 @@
   <div style="min-width: 150px;">
     <span><sup>1</sup> University of Science and Technology</span><br>
     <a href="https://www.ust.ac.kr/eng/">
-      <img style="max-height: 50px; height: auto; width: auto; padding-top: 5px;"
+      <img style="max-height: 10px; height: auto; width: auto; padding-top: 5px;"
            src="./static/assets/ust.svg"
            alt="UST Logo">
     </a>
