@@ -7,26 +7,23 @@
 
 <sup>&#9993;</sup> Corresponding Author &emsp;
 
-<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2em; text-align: center;">
-  <div style="min-width: 150px;">
-    <span><sup>1</sup> University of Science and Technology</span><br>
-    <a href="https://www.ust.ac.kr/eng/">
-      <img style="max-height: 10px; height: auto; width: auto; padding-top: 5px;"
-           src="./static/assets/ust.svg"
-           alt="UST Logo">
-    </a>
-  </div>
+<table>
+  <tr>
+    <td align="center">
+      <sup>1</sup> University of Science and Technology<br>
+      <a href="https://www.ust.ac.kr/eng/">
+        <img src="./static/assets/ust.svg" height="50">
+      </a>
+    </td>
+    <td align="center">
+      <sup>1</sup> Korea Institute of Science and Technology<br>
+      <a href="https://www.kist.re.kr/eng/index.do">
+        <img src="./static/assets/kist.svg" height="50">
+      </a>
+    </td>
+  </tr>
+</table>
   
-  <div style="min-width: 150px;">
-    <span><sup>2</sup> Korea Institute of Science and Technology </span><br>
-    <a href="https://www.kist.re.kr/eng/index.do">
-      <img style="max-height: 60px; height: auto; width: auto; padding-top: 5px;"
-           src="./static/assets/kist.svg"
-           alt="KIST Logo">
-    </a>
-  </div>
-</div>
-
 <br>
 
 [![Elsevier ESWA](https://img.shields.io/badge/-ESWA-FF6C00?style=flat&logo=elsevier&logoColor=FF6C00&labelColor=white)](https://doi.org/10.1016/j.eswa.2022.117310)
