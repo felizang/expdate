@@ -100,6 +100,12 @@ body {
     border-radius: 10px !important;
 }
 
+.publication-video-4x3 {
+    padding-bottom: 75%; /* 4:3 to match the 640x480 webcam video */
+}
+
+.publication-video video,
+
 .publication-video iframe {
     position: absolute;
     top: 0;
@@ -118,7 +124,7 @@ body {
 .results-carousel .item {
   margin: 0;
   overflow: hidden;
-  border: 1px solid #bbb;
+  border: 0px solid #bbb;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
@@ -334,3 +340,5 @@ body {
   }
 }
 
+.results-carousel .slider-navigation-previous { left: 10px; }
+.results-carousel .slider-navigation-next     { right: 10px; }

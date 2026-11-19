@@ -5,27 +5,10 @@
 [**Ahmet Cagatay Seker**](https://acseker.github.io/acseker/)<sup>1,2</sup>&nbsp;·&nbsp;
 [**Sang Chul Ahn**](https://sites.google.com/view/asckist)<sup>1,2,&#9993;</sup>
 
-<sup>&#9993;</sup> Corresponding Author &emsp;
+<sup>1</sup> [University of Science and Technology](https://www.ust.ac.kr/eng/) &nbsp;·&nbsp;
+<sup>2</sup> [Korea Institute of Science and Technology](https://www.kist.re.kr/eng/index.do)
 
-<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2em; text-align: center;">
-  <div style="min-width: 150px;">
-    <span><sup>1</sup> University of Science and Technology</span><br>
-    <a href="https://www.ust.ac.kr/eng/">
-      <img src="./static/assets/ust.svg" height="50"
-           alt="UST Logo">
-    </a>
-  </div>
-  
-  <div style="min-width: 150px;">
-    <span><sup>2</sup> Korea Institute of Science and Technology </span><br>
-    <a href="https://www.kist.re.kr/eng/index.do">
-      <img src="./static/assets/kist.svg" height="50"
-           alt="KIST Logo">
-    </a>
-  </div>
-</div>
-  
-<br>
+<sup>&#9993;</sup> Corresponding Author &emsp;
 
 [![Elsevier ESWA](https://img.shields.io/badge/-ESWA-FF6C00?style=flat&logo=elsevier&logoColor=FF6C00&labelColor=white)](https://doi.org/10.1016/j.eswa.2022.117310)
 [![Project Page](https://img.shields.io/badge/%F0%9F%8C%90-Project%20Page-blue?style=flat)](https://felizang.github.io/expdate/)
